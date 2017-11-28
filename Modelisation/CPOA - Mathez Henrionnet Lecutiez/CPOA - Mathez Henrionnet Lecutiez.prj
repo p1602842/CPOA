@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <?PowerDesigner AppLocale="UTF16" ID="{81BE9E1B-5038-40EC-A349-A8C7813E670F}" Label="" LastModificationDate="1511854374" Name="CPOA - Mathez Henrionnet Lecutiez" Objects="3" Symbols="0" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="15.1.0.2850"?>
+=======
+<?PowerDesigner AppLocale="UTF16" ID="{81BE9E1B-5038-40EC-A349-A8C7813E670F}" Label="" LastModificationDate="1511853749" Name="CPOA - Mathez Henrionnet Lecutiez" Objects="3" Symbols="0" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="15.1.0.2850"?>
+>>>>>>> 26b93023c3ff9fa7f967b4c08da2d6c2bda8ed1d
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -456,8 +460,13 @@ Shadow=0</a:DisplayPreferences>
 <a:Code>ModeleOrienteObjet_1</a:Code>
 <a:CreationDate>1510306429</a:CreationDate>
 <a:Creator>antoi</a:Creator>
+<<<<<<< HEAD
 <a:ModificationDate>1511854374</a:ModificationDate>
 <a:Modifier>antoi</a:Modifier>
+=======
+<a:ModificationDate>1511853749</a:ModificationDate>
+<a:Modifier>darkd</a:Modifier>
+>>>>>>> 26b93023c3ff9fa7f967b4c08da2d6c2bda8ed1d
 <a:Location>file:///%[PRJ_ROOT_DIR]%/ModeleOrienteObjet_1.moo</a:Location>
 <a:Extension>moo</a:Extension>
 <a:ModelDocument.ModelID>648C2694-F794-46BD-9584-B8F05ACF4669</a:ModelDocument.ModelID>
