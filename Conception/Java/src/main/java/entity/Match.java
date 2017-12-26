@@ -4,11 +4,11 @@ import util.Horaire;
 
 public abstract class Match {
 
-	String phaseTournoi;
-	Horaire horaire;
-	boolean accessibleAuPublic;
-	boolean matchJoue;
-	String score;
+	public String phaseTournoi;
+	public Horaire horaire;
+	public boolean accessibleAuPublic;
+	public boolean matchJoue;
+	public String score;
 
 	public Match(String phaseTournoi, Horaire horaire, boolean accessibleAuPublic, boolean matchJoue, String score){
 

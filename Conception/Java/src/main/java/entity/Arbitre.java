@@ -2,10 +2,10 @@ package entity;
 
 public class Arbitre {
 
-	String nom;
-	String prenom;
-	String nationalite;
-	String categorie;
+	public String nom;
+	public String prenom;
+	public String nationalite;
+	public String categorie;
 
 	public Arbitre(String nom, String prenom, String nationalite, String categorie){
 

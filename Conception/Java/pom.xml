@@ -4,4 +4,16 @@
   <artifactId>cpoa-asc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>CPOA Henrionnet Lecutiez Mathez</name>
+  <properties>
+  	<javafx.version>8.0</javafx.version>
+  </properties>
+  <dependencies>
+  	<dependency> 
+	    <groupId>com.oracle</groupId> 
+	    <artifactId>javafx</artifactId> 
+	    <version>${javafx.version}</version> 
+	    <systemPath>${java.home}/lib/ext/jfxrt.jar</systemPath> 
+	    <scope>system</scope> 
+	</dependency>
+  </dependencies>
 </project>
