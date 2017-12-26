@@ -1,6 +1,6 @@
 package entity;
 
-import controller.Horaire;
+import util.Horaire;
 
 public abstract class Match {
 
