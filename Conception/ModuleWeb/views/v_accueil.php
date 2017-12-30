@@ -13,7 +13,7 @@
       </div>
           <img src="<?= PATH_TENNIS ?>" alt="<?= TENNIS ?>" class="img-accueil">
     </div>
-
+      <h4><?= MESSAGE_POUR_ADMIN ?></h4>
   </section>
 </header>
 <!--  Fin de la page -->

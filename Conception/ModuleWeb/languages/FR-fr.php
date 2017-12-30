@@ -7,7 +7,8 @@ define('TITRE', 'Grand Prix de Tennis de Lyon');
 define('MESSAGE_BIENVENUE','Bienvenue sur notre billeterie en ligne du grand
 prix de tennis de Lyon. Ici vous pouvez achetez vos billets en ligne en fonction
 de la catégorie souhaitée.Vous pouvez également consultez le planning afin de
-connaitre les matchs qui se jouent. Si vous êtes un administrateur, veuillez
+connaitre les matchs qui se jouent.');
+define('MESSAGE_POUR_ADMIN',' Si vous êtes un administrateur, veuillez
 vous connectez pour accèder à vos privilèges.');
 
 

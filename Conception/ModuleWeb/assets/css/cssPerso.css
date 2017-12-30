@@ -4,8 +4,26 @@
 
 .img-accueil{
 	background-size: 100% auto;
+	max-width: 85%;
+	border-radius: 10px;
 }
+h3{
+		font-size: 200%;
+}
+
+h4{
+	font-size: 85%;
+}
+
 .flag{
     padding-top: 20px;
     padding-bottom: 10px;
+}
+
+.footer{
+	text-align: left;
+}
+
+.header{
+	background-color: #4B77BE;
 }
