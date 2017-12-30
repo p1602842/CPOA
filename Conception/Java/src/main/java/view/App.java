@@ -2,13 +2,17 @@ package view;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.AccesBD;
 import util.Utile;
 
 public class App extends Application {
@@ -29,6 +33,12 @@ public class App extends Application {
 		stage.setScene(scene);
 
 		stage.show();
+	}
+
+	@Override
+	public void stop(){
+
+		AccesBD.getInstance().fermerConnexion();
 	}
 
 	public static void main(String[] args){
