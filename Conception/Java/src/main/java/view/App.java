@@ -2,11 +2,8 @@ package view;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;

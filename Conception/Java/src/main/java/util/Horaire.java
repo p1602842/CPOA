@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Horaire {
 
-	public String horaire;
+	public String horaire = null;
 	private static List<String> horairesPossibles = Arrays.asList("Matin", "Matinée", "Midi", "Après-midi", "Soirée");
 
 	public Horaire(String horaire){

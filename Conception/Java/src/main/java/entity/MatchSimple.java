@@ -1,11 +1,13 @@
 package entity;
 
-import util.Horaire;
+import java.util.List;
+
+import util.Moment;
 
 public class MatchSimple extends Match {
 
-	public MatchSimple(String phaseTournoi, Horaire horaire, boolean accessibleAuPublic, boolean matchJoue, String score) {
+	public MatchSimple(String phaseTournoi, Moment moment, boolean accessibleAuPublic, boolean matchJoue, String score, Arbitre arbitreChaise, List<Arbitre> arbitresLigne) {
 
-		super(phaseTournoi, horaire, accessibleAuPublic, matchJoue, score);
+		super(phaseTournoi, moment, accessibleAuPublic, matchJoue, score, arbitreChaise, arbitresLigne);
 	}
 }
