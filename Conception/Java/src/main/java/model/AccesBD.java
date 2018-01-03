@@ -26,7 +26,7 @@ public class AccesBD {
 		return(connexion);
 	}
 
-	public static boolean estValide(Connection connexion){
+	public boolean estValide(){
 
 		if(connexion == null){
 			return false;

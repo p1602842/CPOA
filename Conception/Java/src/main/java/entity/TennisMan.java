@@ -16,4 +16,14 @@ public class TennisMan {
 		this.age = age;
 		this.nationalite = nationalite;
 	}
+
+	public String getPrenom(){
+
+		return(prenom);
+	}
+
+	public String getNom(){
+
+		return(nom);
+	}
 }
