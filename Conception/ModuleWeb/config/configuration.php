@@ -3,13 +3,13 @@
 const DEBUG = true; // production : false; dev : true
 
 // Accès base de données
-const BD_HOST = 'iutdoua-web.univ-lyon1.fr';
-const BD_DBNAME = 'p1600594';
-const BD_USER = 'p1600594';
-const BD_PWD = '!xDw394!pV';
+const BD_HOST = '90.119.181.117';
+const BD_DBNAME = 'cpoa-asc';
+const BD_USER = 'CPOA';
+const BD_PWD = 'carotte';
 
 // Identifiants connexion espace administrateur
-const USERNAME = "Admin";
+const USERNAME = "CPOA";
 const PASSWORD = "carotte";
 
 // Langue du site

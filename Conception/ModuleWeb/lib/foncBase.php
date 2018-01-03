@@ -14,6 +14,9 @@ function choixAlert($message, $arg=null)
           break;
       case 'url_non_valide' :
           $alert['messageAlert'] = TEXTE_PAGE_404;
+          break;      
+      case 'nonAdmin' :
+          $alert['messageAlert']= ERREUR_IS_CO;
           break;
       case 'cat_empty' :
           $alert['messageAlert'] = ERREUR_FORM_CAT_EMPTY;

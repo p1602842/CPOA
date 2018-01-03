@@ -12,6 +12,8 @@ class Connexion
 	$this->_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
 
+  
+
   //appelée par clone
   private function __clone()
   {

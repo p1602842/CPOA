@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+}
+
+#home, #Movies, #MoviesD, #Pictures, #PicturesD, #VIP, #VIPD
+{
+    margin: auto;
+}
+
+.container
+{
+    margin: auto;
+}
+
+#search, #search:hover, #search:focus
+{
+    border: none !important;
+    box-shadow: none;
+}

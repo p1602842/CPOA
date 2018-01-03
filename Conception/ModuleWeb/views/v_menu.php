@@ -22,8 +22,8 @@
 				</li>
 
 				<?php if($_SESSION['logged']){?>
-				<li <?php echo ($page=='admin' ? 'class="active"':'')?> >
-					<a href="index.php?page=admin">
+				<li <?php echo ($page=='administrateur' ? 'class="active"':'')?> >
+					<a href="index.php?page=administrateur">
 						<?= MENU_ADMIN ?>
 					</a>
 				</li>
@@ -34,13 +34,8 @@
         <li <?php echo ($page=='connexion' ? 'class="active"':'')?> >
             <a href="index.php?page=connexion"><?= MENU_CONNEXION ?></a>
         </li>
+
         <?php } else { ?>
-
-        <li>
-            <a href="index.php?page=profil&id=<?=$_SESSION["user"]->getId()?>"><?=$_SESSION["user"]->getUsername()?></a>
-        </li>
-
-
         <li>
             <a href="index.php?page=deconnexion"><?= MENU_DECONNEXION ?></a>
         </li>

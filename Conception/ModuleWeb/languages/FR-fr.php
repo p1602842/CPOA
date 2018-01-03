@@ -4,23 +4,30 @@
 define('LOGO', 'Logo du grand prix de tennis'); // Affiché si image non trouvée
 define('TENNIS','Image de tennis'); //idem
 define('TITRE', 'Grand Prix de Tennis de Lyon');
-define('MESSAGE_BIENVENUE','Bienvenue sur notre billeterie en ligne du grand
-prix de tennis de Lyon. Ici vous pouvez achetez vos billets en ligne en fonction
-de la catégorie souhaitée.Vous pouvez également consultez le planning afin de
+define('MESSAGE_BIENVENUE','Le Grand Prix de Tennis de Lyon revient ! </br>
+Après neuf ans d\'absence, le tournoi qui a fait vibrer tous les 
+passionnés de tennis de la région lyonnaise est de retour. </br>
+Celui-ci est toujours classé dans la catégorie ATP 250 et disputé sur terrain dur. </br>
+Venez assister à ce grand moment de tennis du 12 au 20 mai 2018.
+Une billeterie en ligne est à votre disposition sur ce site. Ici vous pouvez achetez vos billets 
+en ligne en fonction de la catégorie souhaitée. </br> Vous pouvez également consultez le planning afin de
 connaitre les matchs qui se jouent.');
 define('MESSAGE_POUR_ADMIN',' Si vous êtes un administrateur, veuillez
 vous connectez pour accèder à vos privilèges.');
-
 
 //Menu
 define('MENU_ACCUEIL','Accueil');
 define('MENU_BILLET','Billets');
 define('MENU_PLANNING','Planning');
+define('MENU_SIMPLE','Simple');
+define('MENU_DOUBLE','Double');
+define('MENU_BIGMATCH','Big Match');
 
 
-define('MENU_CONNEXION','Connexion');
+define('MENU_CONNEXION','Connexion Administrateur');
 define('MENU_DECONNEXION','Deconnexion');
 define('MENU_ADMIN','Administrateur');
+define('MENU_STATISTIQUES','Statistiques');
 
 
 //Messages d'erreurs:
@@ -42,9 +49,7 @@ define('ERREUR_FORM_PHOTO_ALREADYEXIST','Ce nom de fichier est déjà pris !');
 define('ERREUR_FORM_CONNEXION_UNKNOWID','Cet identifiant est inconnu !');
 define('ERREUR_FORM_CONNEXION_PASSWORD','Mot de passe incorrect !');
 
-define('ERREUR_FORM_INSCRIPTION_LONGUEURID','Le nom d\'utilisateur doit être compris entre 4 et 20 caractères !');
-define('ERREUR_FORM_INSCRIPTION_LONGUEURMDP','Le mot de passe doit comporter au moins 4 caractères !');
-define('ERREUR_FORM_INSCRIPTION_ALREADYEXIST','Cet utilisateur existe déjà !');
+define('ERREUR_IS_CO','Vous ne pouvez pas accéder à cette page si vous n\'êtes pas connecté');
 
 define('ERREUR_PHOTO_BADID','Identifiant de photo incorrect dans l\'URL');
 define('ERREUR_PHOTO_DELETE','Supression impossible !');
@@ -91,9 +96,7 @@ define('FORM_QUESTION_CAT_AFFICHER','Quelles photos souhaitez-vous afficher ?');
 
 define('FORM_QUESTION_CAT_NAME','Nom de la catégorie:');
 
-define('FORM_QUESTION_PHOTO_FICHIER','Choisir le fichier:');
-define('FORM_QUESTION_PHOTO_DESC','Décrire la photo en une phrase:');
-define('FORM_QUESTION_PHOTO_CAT','Choisir une catégorie:');
+define('FORM_QUESTION_PLANNING_FICHIER','Choisir le nouveau planning:');
 
 define('FORM_CONNEXION_IDENTIFIANT','Identifiant');
 define('FORM_CONNEXION_MDP','Mot de passe');
@@ -101,3 +104,4 @@ define('FORM_CONNEXION_MDP','Mot de passe');
 
 // Boutons
 define('BUTTON_CONNEXION','Se connecter');
+define('BUTTON_ENVOYER','Mettre à jour le planning');
