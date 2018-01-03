@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+
 public class Utile {
 
 	public static File recupererFichier(String path){
@@ -21,5 +24,19 @@ public class Utile {
 	public static InputStream recupererStream(String path){
 
 		return(Utile.class.getResourceAsStream(path));
+	}
+
+	public static Node chargerFxml(String nom){
+
+		try {
+			Node root;
+			URL fxmlUrl = Utile.recupererFichier("/Interface/Content/" + nom + ".fxml").toURI().toURL();
+			FXMLLoader chargeurFxml = new FXMLLoader(fxmlUrl);
+			root = chargeurFxml.load();
+			return(root);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return(null);
+		}
 	}
 }

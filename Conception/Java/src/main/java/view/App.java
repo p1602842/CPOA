@@ -1,12 +1,9 @@
 package view;
 
 import java.io.IOException;
-import java.net.URL;
 
 import entity.TennisMan;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -16,12 +13,12 @@ import util.Utile;
 
 public class App extends Application {
 
-	public static boolean connecte = false;
-	public static String rpConnecte = null;
-	public static TennisMan tennisManConnecte = null;
+	private static boolean connecte = false;
+	private static String rpConnecte = null;
+	private static TennisMan tennisManConnecte = null;
 
-	public static String ecran = "accueil";
-	public static StackPane conteneur = new StackPane();
+	private static String ecran = "accueil";
+	private static StackPane conteneur = new StackPane();
 
 	@Override
 	public void start(Stage stage) throws IOException{
@@ -79,15 +76,27 @@ public class App extends Application {
 		App.rechargerConteneur();
 	}
 
+	public static boolean getConnecte(){
+
+		return(connecte);
+	}
+
+	public static String getRpConnecte(){
+
+		return(rpConnecte);
+	}
+
+	public static TennisMan getTennisManConnecte(){
+
+		return(tennisManConnecte);
+	}
+
 	public static void rechargerConteneur(){
 
 		conteneur.getChildren().setAll();
 
 		try {
-			URL fxmlUrl = Utile.recupererFichier("/Interface/Content/" + ecran + ".fxml").toURI().toURL();
-			FXMLLoader chargeurFxml = new FXMLLoader(fxmlUrl);
-			final Node ecranFxml = chargeurFxml.load();
-			Parent ecranParent = (Parent)ecranFxml;
+			Parent ecranParent = (Parent)Utile.chargerFxml(ecran);
 
 			conteneur.getChildren().setAll(ecranParent);
 		} catch(Exception e){

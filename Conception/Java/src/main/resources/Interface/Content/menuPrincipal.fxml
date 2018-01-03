@@ -3,8 +3,12 @@
 <?import java.lang.*?> 
 <?import java.util.*?> 
 <?import javafx.scene.*?> 
-<?import javafx.scene.layout.*?> 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?> 
   
-<TilePane fx:id="menuPrincipal" id="menu-principal" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.MenuPrincipal">
-	
+<TilePane fx:id="menuPrincipal" id="menu-principal" fx:controller="controller.MenuPrincipal" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+	<children>
+		<Button text="Consulter le planning" />
+		<Button text="Consulter le plan" />
+	</children>
 </TilePane>

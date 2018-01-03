@@ -1,10 +1,6 @@
 package controller;
 
-import java.net.URL;
-
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
@@ -18,10 +14,7 @@ public class BoutonConnexion {
 	private void onButtonActivated(){
 
 		try{
-			URL fxmlUrl = Utile.recupererFichier("/Interface/Content/connexion.fxml").toURI().toURL();
-			FXMLLoader chargeurFxml = new FXMLLoader(fxmlUrl);
-			final Node rootFxml = chargeurFxml.load();
-			Parent root = (Parent)rootFxml;
+			Parent root = (Parent)Utile.chargerFxml("connexion");
 
 			Stage stage = new Stage();
 
