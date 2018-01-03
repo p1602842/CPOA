@@ -19,7 +19,8 @@ public class TennisManDAO extends DAO {
 			ResultSet resultat = prep.executeQuery();
 
 			if(resultat.next()){
-				TennisMan tennisMan = new TennisMan(resultat.getString("NOM_TENNISMAN"),
+				TennisMan tennisMan = new TennisMan(resultat.getInt("ID_TENNISMAN"),
+						resultat.getString("NOM_TENNISMAN"),
 						resultat.getString("PRENOM_TENNISMAN"),
 						resultat.getInt("RANG"),
 						resultat.getInt("AGE"),

@@ -2,12 +2,27 @@ package entity;
 
 public abstract class Terrain {
 
-	public String nom;
-	public String localisation;
+	@SuppressWarnings("unused")
+	private int id;
+	private String nom;
+	@SuppressWarnings("unused")
+	private String localisation;
 
-	public Terrain(String nom, String localisation){
+	public Terrain(int id, String nom, String localisation){
 
+		this.id = id;
 		this.nom = nom;
 		this.localisation = localisation;
+	}
+
+	public String getNom(){
+
+		return(nom);
+	}
+
+	@Override
+	public String toString(){
+
+		return(getNom());
 	}
 }

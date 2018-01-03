@@ -17,11 +17,19 @@ public class Banniere implements Initializable {
 
 	public void initialize(URL location, ResourceBundle resources){
 
+		root.getChildren().clear();
+
+		if(!App.getEcran().equals("accueil")){
+			final Node boutonRetour = Utile.chargerFxml("boutonRetour");
+
+			root.getChildren().add(boutonRetour);
+		}
+
 		if(App.getConnecte()){
 			try {
 				final Node boutonDeconnexion = Utile.chargerFxml("boutonDeconnexion");
 				
-				root.getChildren().setAll(boutonDeconnexion);
+				root.getChildren().add(boutonDeconnexion);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -30,7 +38,7 @@ public class Banniere implements Initializable {
 			try {
 				final Node boutonConnexionFxml = Utile.chargerFxml("boutonConnexion");
 
-				root.getChildren().setAll(boutonConnexionFxml);
+				root.getChildren().add(boutonConnexionFxml);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

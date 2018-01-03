@@ -15,10 +15,10 @@
 	<gridLinesVisible>
 		false
 	</gridLinesVisible>
-	<Label text="Login" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-	<TextField fx:id="loginField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-	<Label text="Mot de passe" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-	<PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+	<Label text="Login" labelFor="$loginField" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+	<TextField fx:id="loginField" id="loginField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+	<Label text="Mot de passe" labelFor="$passwordField" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+	<PasswordField fx:id="passwordField" id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 	<HBox alignment="bottom_right" GridPane.columnIndex="1" GridPane.rowIndex="2">
 		<Button text="Se connecter" defaultButton="true" onAction="#onButtonActivated" />
 	</HBox>

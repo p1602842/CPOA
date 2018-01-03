@@ -2,19 +2,29 @@ package entity;
 
 public class TennisMan {
 
-	public String nom;
-	public String prenom;
-	public int rang;
-	public int age;
-	public String nationalite;
+	private int id;
+	private String nom;
+	private String prenom;
+	@SuppressWarnings("unused")
+	private int rang;
+	@SuppressWarnings("unused")
+	private int age;
+	@SuppressWarnings("unused")
+	private String nationalite;
 
-	public TennisMan(String nom, String prenom, int rang, int age, String nationalite){
+	public TennisMan(int id, String nom, String prenom, int rang, int age, String nationalite){
 
+		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.rang = rang;
 		this.age = age;
 		this.nationalite = nationalite;
+	}
+
+	public int getId(){
+
+		return(id);
 	}
 
 	public String getPrenom(){

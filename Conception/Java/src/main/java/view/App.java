@@ -1,6 +1,8 @@
 package view;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import entity.TennisMan;
 import javafx.application.Application;
@@ -13,6 +15,7 @@ import util.Utile;
 
 public class App extends Application {
 
+	private static final List<String> ECRANS_ACCESSIBLES_SANS_CONNEXION = Arrays.asList("accueil", "affichage planning", "plan");
 	private static boolean connecte = false;
 	private static String rpConnecte = null;
 	private static TennisMan tennisManConnecte = null;
@@ -47,6 +50,12 @@ public class App extends Application {
 	public static void setEcran(String newEcran){
 
 		ecran = newEcran;
+		rechargerConteneur();
+	}
+
+	public static String getEcran(){
+
+		return(ecran);
 	}
 
 	public static void setRpConnecte(String rp){
@@ -72,6 +81,10 @@ public class App extends Application {
 		rpConnecte = null;
 		tennisManConnecte = null;
 		connecte = false;
+
+		if(!ECRANS_ACCESSIBLES_SANS_CONNEXION.contains(ecran)){
+			setEcran("accueil");
+		}
 
 		App.rechargerConteneur();
 	}
