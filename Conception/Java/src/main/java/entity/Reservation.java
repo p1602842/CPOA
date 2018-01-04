@@ -5,7 +5,6 @@ import util.Moment;
 public class Reservation {
 
 	private int id;
-	@SuppressWarnings("unused")
 	private TennisMan reservant;
 	private TerrainEntrainement terrain;
 	private Moment momentReservation;
@@ -21,6 +20,11 @@ public class Reservation {
 	public int getId(){
 
 		return(id);
+	}
+
+	public TennisMan getReservant(){
+
+		return(reservant);
 	}
 
 	public TerrainEntrainement getTerrain(){

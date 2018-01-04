@@ -5,14 +5,15 @@ import java.util.List;
 
 public class Moment {
 
-	public String jour = null;
-	public Horaire horaire = null;
-	private static List<String> joursPossibles = Arrays.asList("Samedi Qualif", "Dimanche Qualif", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"); 
+	public static final List<String> JOURS_POSSIBLES = Arrays.asList("Samedi Qualif", "Dimanche Qualif", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche");
+
+	private String jour = null;
+	private Horaire horaire = null; 
 
 	public Moment(String jour, Horaire horaire){
 
 		this.horaire = horaire;
-		if(joursPossibles.contains(jour)){
+		if(JOURS_POSSIBLES.contains(jour)){
 			this.jour = jour;
 		}
 	}
@@ -24,7 +25,7 @@ public class Moment {
 		String horaireEnregistrement = morceaux[1];
 
 		horaire = new Horaire(horaireEnregistrement);
-		if(joursPossibles.contains(jourEnregistrement)){
+		if(JOURS_POSSIBLES.contains(jourEnregistrement)){
 			jour = jourEnregistrement;
 		}
 	}
@@ -32,7 +33,7 @@ public class Moment {
 	public Moment(int j, Horaire horaire){
 
 		this.horaire = horaire;
-		this.jour = joursPossibles.get(j % joursPossibles.size());
+		this.jour = JOURS_POSSIBLES.get(j % JOURS_POSSIBLES.size());
 	}
 
 	public String getJour(){

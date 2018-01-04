@@ -18,6 +18,6 @@
 		</TableView>
 	</center>
 	<right>
-		<Button text="Réserver un terrain" />
+		<Button text="Réserver un terrain" onAction="#onButtonActivated" />
 	</right>
 </BorderPane>

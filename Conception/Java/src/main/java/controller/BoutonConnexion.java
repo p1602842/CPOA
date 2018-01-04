@@ -19,7 +19,7 @@ public class BoutonConnexion {
 			Stage stage = new Stage();
 
 			stage.setTitle("Connexion");
-			stage.setScene(new Scene(root, 330, 200));
+			stage.setScene(new Scene(root, 280, 160));
 			stage.initStyle(StageStyle.UTILITY);
 			stage.initModality(Modality.APPLICATION_MODAL);
 			stage.setResizable(false);

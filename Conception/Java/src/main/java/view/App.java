@@ -16,6 +16,7 @@ import util.Utile;
 public class App extends Application {
 
 	private static final List<String> ECRANS_ACCESSIBLES_SANS_CONNEXION = Arrays.asList("accueil", "affichage planning", "plan");
+
 	private static boolean connecte = false;
 	private static String rpConnecte = null;
 	private static TennisMan tennisManConnecte = null;
@@ -25,6 +26,10 @@ public class App extends Application {
 
 	@Override
 	public void start(Stage stage) throws IOException{
+
+		//------ZONE-TEST------\\
+
+		//------ZONE-TEST------\\
 
 		rechargerConteneur();
 

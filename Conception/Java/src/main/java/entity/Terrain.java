@@ -2,7 +2,6 @@ package entity;
 
 public abstract class Terrain {
 
-	@SuppressWarnings("unused")
 	private int id;
 	private String nom;
 	@SuppressWarnings("unused")
@@ -15,6 +14,11 @@ public abstract class Terrain {
 		this.localisation = localisation;
 	}
 
+	public int getId(){
+
+		return(id);
+	}
+
 	public String getNom(){
 
 		return(nom);
@@ -24,5 +28,21 @@ public abstract class Terrain {
 	public String toString(){
 
 		return(getNom());
+	}
+
+	@Override
+	public boolean equals(Object o){
+
+		if (o == null)
+			return(false);
+	    if (o == this)
+	    	return(true);
+	    if (!(o instanceof Terrain))
+	    	return(false);
+	    Terrain oTerrain = (Terrain)o;
+	    if(oTerrain.getId() == this.getId())
+	    	return(true);
+	    else
+	    	return(false);
 	}
 }

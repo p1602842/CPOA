@@ -8,14 +8,20 @@ import entity.Reservation;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import model.ReservationDAO;
+import util.Utile;
 import view.App;
 
 public class PageReservation implements Initializable {
@@ -66,7 +72,7 @@ public class PageReservation implements Initializable {
 							setText(null);
 						} else {
 							bouton.setOnAction(event -> {
-								System.out.println(ReservationDAO.annulerReservation(getTableView().getItems().get(getIndex()).getId()));
+								ReservationDAO.annulerReservation(getTableView().getItems().get(getIndex()));
 								App.rechargerConteneur();
 							});
 							setGraphic(bouton);
@@ -82,5 +88,24 @@ public class PageReservation implements Initializable {
 		colonneAnnuler.setCellFactory(cellFactory);
 
 		table.getColumns().setAll(colonneTerrain, colonneHoraire, colonneAnnuler);
+	}
+
+	@FXML
+	private void onButtonActivated(){
+
+		try{
+			Parent root = (Parent)Utile.chargerFxml("reserverNouveauTerrainEntrainement");
+
+			Stage stage = new Stage();
+
+			stage.setTitle("Ajouter une réservation de terrain d'entraînement");
+			stage.setScene(new Scene(root, 300, 180));
+			stage.initStyle(StageStyle.UTILITY);
+			stage.initModality(Modality.APPLICATION_MODAL);
+			stage.setResizable(false);
+			stage.show();
+		} catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 }

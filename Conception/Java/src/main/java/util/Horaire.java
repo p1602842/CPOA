@@ -5,19 +5,20 @@ import java.util.List;
 
 public class Horaire {
 
-	public String horaire = null;
-	private static List<String> horairesPossibles = Arrays.asList("Matin", "Matinée", "Midi", "Après-midi", "Soirée");
+	public static final List<String> HORAIRES_POSSIBLES = Arrays.asList("Matin", "Matinée", "Midi", "Après-midi", "Soirée");
+
+	private String horaire = null;
 
 	public Horaire(String horaire){
 
-		if(horairesPossibles.contains(horaire)){
+		if(HORAIRES_POSSIBLES.contains(horaire)){
 			this.horaire = horaire;
 		}
 	}
 
 	public Horaire(int h){
 
-		this.horaire = horairesPossibles.get(h % horairesPossibles.size());
+		this.horaire = HORAIRES_POSSIBLES.get(h % HORAIRES_POSSIBLES.size());
 	}
 
 	public String getValeur(){
