@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+  
+<?import java.lang.*?> 
+<?import java.util.*?> 
+<?import javafx.scene.*?> 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+  
+<GridPane id="GridPane" alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.Connexion">
+	<padding>
+		<Insets top="25" right="25" bottom="25" left="25" />
+	</padding>
+	<gridLinesVisible>
+		false
+	</gridLinesVisible>
+	<Label text="Login" labelFor="$loginField" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+	<TextField fx:id="loginField" id="loginField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+	<Label text="Mot de passe" labelFor="$passwordField" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+	<PasswordField fx:id="passwordField" id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+	<HBox alignment="bottom_right" GridPane.columnIndex="1" GridPane.rowIndex="2">
+		<Button text="Se connecter" defaultButton="true" onAction="#onButtonActivated" />
+	</HBox>
+	<HBox alignment="bottom_right" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+		<Text fx:id="target" wrappingWidth="200.0" />
+	</HBox>
+</GridPane>

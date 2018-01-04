@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+  
+<?import java.lang.*?> 
+<?import java.util.*?> 
+<?import javafx.scene.*?> 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+  
+<GridPane id="BorderPane" fx:controller="controller.NouvelleReservation" alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+	<padding>
+		<Insets top="25" right="25" bottom="25" left="25" />
+	</padding>
+	<gridLinesVisible>
+		false
+	</gridLinesVisible>
+	<Label text="Jour" labelFor="$jourBox" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+	<ComboBox fx:id="jourBox" id="jour-box" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+	<Label text="Horaire" labelFor="$horaireBox" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+	<ComboBox fx:id="horaireBox" id="horaire-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+	<Label text="Terrain" labelFor="$terrainBox" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+	<ComboBox fx:id="terrainBox" id="terrain-box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+	<HBox alignment="bottom_right" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+		<Button text="Ajouter Réservation" defaultButton="true" onAction="#onButtonActivated" />
+	</HBox>
+</GridPane>
