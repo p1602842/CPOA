@@ -86,9 +86,13 @@ public class NouvelleReservation implements Initializable {
 	@FXML
 	public void onButtonActivated(){
 
-		Reservation reservation = new Reservation(0, App.getTennisManConnecte(), terrainBox.getSelectionModel().getSelectedItem(), new Moment(jourBox.getSelectionModel().getSelectedItem(), horaireBox.getSelectionModel().getSelectedItem()));
-		ReservationDAO.ajouterReservation(reservation);
-		App.rechargerConteneur();
+		if(!jourBox.getSelectionModel().isEmpty() && !horaireBox.getSelectionModel().isEmpty() && !terrainBox.getSelectionModel().isEmpty()){
+			Reservation reservation = new Reservation(0, App.getTennisManConnecte(), terrainBox.getSelectionModel().getSelectedItem(), new Moment(jourBox.getSelectionModel().getSelectedItem(), horaireBox.getSelectionModel().getSelectedItem()));
+			ReservationDAO.ajouterReservation(reservation);
+			App.rechargerConteneur();
+			jourBox.getSelectionModel().clearSelection();
+			horaireBox.getSelectionModel().clearSelection();
+			terrainBox.getSelectionModel().clearSelection();
+		}
 	}
-
 }

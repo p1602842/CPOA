@@ -20,13 +20,17 @@ public class Moment {
 
 	public Moment(String enregistrement){
 
-		String[] morceaux = enregistrement.split("_");
-		String jourEnregistrement = morceaux[0];
-		String horaireEnregistrement = morceaux[1];
+		if(enregistrement != null){
+			String[] morceaux = enregistrement.split("_");
+			if(morceaux.length >= 2){
+				String jourEnregistrement = morceaux[0];
+				String horaireEnregistrement = morceaux[1];
 
-		horaire = new Horaire(horaireEnregistrement);
-		if(JOURS_POSSIBLES.contains(jourEnregistrement)){
-			jour = jourEnregistrement;
+				horaire = new Horaire(horaireEnregistrement);
+				if(JOURS_POSSIBLES.contains(jourEnregistrement)){
+					jour = jourEnregistrement;
+				}
+			}
 		}
 	}
 

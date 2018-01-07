@@ -1,14 +1,24 @@
 package entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Equipe {
 
-	public List<TennisMan> tennisMen = new ArrayList<TennisMan>();
+	private TennisMan tennisMan1;
+	private TennisMan tennisMan2;
 
-	public Equipe(List<TennisMan> tennisMen){
+	public Equipe(TennisMan tennisMan1, TennisMan tennisMan2){
 
-		this.tennisMen = tennisMen;
+		this.tennisMan1 = tennisMan1;
+		this.tennisMan2 = tennisMan2;
+	}
+
+	public String getNomsMembres(){
+
+		return(tennisMan1.getPrenomNom() + " & " + tennisMan2.getPrenomNom());
+	}
+
+	@Override
+	public String toString(){
+
+		return(getNomsMembres());
 	}
 }

@@ -36,4 +36,15 @@ public class TennisMan {
 
 		return(nom);
 	}
+
+	public String getPrenomNom(){
+
+		return(getPrenom() + " " + getNom());
+	}
+
+	@Override
+	public String toString(){
+
+		return(getPrenomNom());
+	}
 }
