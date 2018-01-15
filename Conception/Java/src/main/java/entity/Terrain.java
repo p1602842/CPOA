@@ -2,10 +2,9 @@ package entity;
 
 public abstract class Terrain {
 
-	private int id;
-	private String nom;
-	@SuppressWarnings("unused")
-	private String localisation;
+	protected int id;
+	protected String nom;
+	protected String localisation;
 
 	public Terrain(int id, String nom, String localisation){
 

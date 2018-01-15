@@ -1,11 +1,14 @@
 package util;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Moment {
 
 	public static final List<String> JOURS_POSSIBLES = Arrays.asList("Samedi Qualif", "Dimanche Qualif", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche");
+	public static final List<String> JOURS_POSSIBLES_TOURNOI = Arrays.asList("Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche");
+	public static final List<String> JOURS_POSSIBLES_QUALIFS = Arrays.asList("Samedi Qualif", "Dimanche Qualif");
 
 	private String jour = null;
 	private Horaire horaire = null; 
@@ -53,6 +56,39 @@ public class Moment {
 	public String getEnregistrement(){
 
 		return(jour + "_" + horaire.getValeur());
+	}
+
+	public static List<Moment> tousLesMoments(){
+
+		List<Moment> moments = new ArrayList<Moment>();
+
+		for(String jour : JOURS_POSSIBLES){
+			for(Horaire horaire : Horaire.toutesLesHoraires()){
+				moments.add(new Moment(jour, horaire));
+			}
+		}
+
+		return(moments);
+	}
+
+	public boolean estAvant(Moment m){
+
+		if(JOURS_POSSIBLES.indexOf(m.getJour()) == JOURS_POSSIBLES.indexOf(getJour())){
+			return(getHoraire().estAvant(m.getHoraire()));
+		}
+		else {
+			return(JOURS_POSSIBLES.indexOf(m.getJour()) > JOURS_POSSIBLES.indexOf(getJour()));
+		}
+	}
+
+	public boolean estApres(Moment m){
+
+		if(JOURS_POSSIBLES.indexOf(m.getJour()) == JOURS_POSSIBLES.indexOf(getJour())){
+			return(getHoraire().estApres(m.getHoraire()));
+		}
+		else {
+			return(JOURS_POSSIBLES.indexOf(m.getJour()) < JOURS_POSSIBLES.indexOf(getJour()));
+		}
 	}
 
 	@Override

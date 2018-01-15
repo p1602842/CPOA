@@ -6,12 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entity.Arbitre;
+import entity.Match;
 import entity.MatchSimple;
 import entity.TennisMan;
+import entity.Terrain;
+import util.Horaire;
 import util.Moment;
 import util.PhaseTournoi;
 
-public class MatchSimpleDAO extends DAO {
+public class MatchSimpleDAO extends MatchDAO {
 
 	public static MatchSimple trouver(int id){
 

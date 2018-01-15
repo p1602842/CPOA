@@ -19,7 +19,7 @@
 		</VBox>
 	</top>
 	<center>
-		<TabPane tabClosingPolicy="UNAVAILABLE">
+		<TabPane fx:id="root" tabClosingPolicy="UNAVAILABLE">
 			<tabs>
 				<Tab text="Qualifications">
 					<content>
@@ -206,8 +206,8 @@
 	</center>
 	<right>
 		<VBox spacing="10.0">
-			<Button text="Horaires et emplacements" onAction="#onButtonHorairesActivated" />
-			<Button text="Staff" onAction="#onButtonStaffActivated" />
+			<Button fx:id="boutonHoraires" text="Horaires et emplacements" onAction="#onButtonHorairesActivated" />
+			<Button fx:id="boutonStaff" text="Staff" onAction="#onButtonStaffActivated" />
 			<Button text="Scores" onAction="#onButtonScoresActivated" />
 		</VBox>
 	</right>

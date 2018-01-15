@@ -11,7 +11,7 @@ import entity.MatchDouble;
 import util.Moment;
 import util.PhaseTournoi;
 
-public class MatchDoubleDAO extends DAO {
+public class MatchDoubleDAO extends MatchDAO {
 
 	public static MatchDouble trouver(int id){
 

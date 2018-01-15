@@ -1,5 +1,6 @@
 package util;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,6 +25,27 @@ public class Horaire {
 	public String getValeur(){
 
 		return(horaire);
+	}
+
+	public static List<Horaire> toutesLesHoraires(){
+
+		List<Horaire> horaires = new ArrayList<Horaire>();
+
+		for(String horaireString : HORAIRES_POSSIBLES){
+			horaires.add(new Horaire(horaireString));
+		}
+
+		return(horaires);
+	}
+
+	public boolean estAvant(Horaire h){
+
+		return((HORAIRES_POSSIBLES.indexOf(h.getValeur()) > HORAIRES_POSSIBLES.indexOf(getValeur())));
+	}
+
+	public boolean estApres(Horaire h){
+
+		return((HORAIRES_POSSIBLES.indexOf(h.getValeur()) < HORAIRES_POSSIBLES.indexOf(getValeur())));
 	}
 
 	@Override

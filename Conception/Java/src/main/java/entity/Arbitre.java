@@ -17,6 +17,11 @@ public class Arbitre {
 		this.categorie = categorie;
 	}
 
+	public int getId(){
+
+		return(id);
+	}
+
 	public String getPrenom(){
 
 		return(prenom);

@@ -17,10 +17,19 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.SplitPane;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import model.MatchDoubleDAO;
 import model.MatchSimpleDAO;
 import model.TennisManDAO;
@@ -28,8 +37,12 @@ import model.TerrainDAO;
 import util.Horaire;
 import util.Moment;
 import util.PhaseTournoi;
+import util.Utile;
 
 public class PagePlanning implements Initializable {
+
+	@FXML
+	private TabPane root;
 
 	@FXML
 	private TableView<MatchSimple> tableQ16;
@@ -109,7 +122,13 @@ public class PagePlanning implements Initializable {
 	@FXML
 	private VBox boxD1;
 
-	private MatchSimple matchQ16;
+	@FXML
+	private Button boutonHoraires;
+
+	@FXML
+	private Button boutonStaff;
+
+	private static Match matchSelectionne = null;
 
 	private List<TableView<MatchSimple>> tablesSimple = Arrays.asList(tableQ16, tableQ8, tableQ4, tableS16, tableS8, tableS4, tableS2, tableS1);
 
@@ -154,28 +173,64 @@ public class PagePlanning implements Initializable {
 		tableS8.getItems().setAll(MatchSimpleDAO.trouver(45, 52));
 		tableS4.getItems().setAll(MatchSimpleDAO.trouver(53, 56));
 		tableS2.getItems().setAll(MatchSimpleDAO.trouver(57, 58));
-		tableS1.getItems().setAll(MatchSimpleDAO.trouver(59, 59));
+		tableS1.getItems().setAll(MatchSimpleDAO.trouver(59));
 		tableD16.getItems().setAll(MatchDoubleDAO.trouver(1, 16));
 		tableD8.getItems().setAll(MatchDoubleDAO.trouver(17, 24));
 		tableD4.getItems().setAll(MatchDoubleDAO.trouver(25, 28));
 		tableD2.getItems().setAll(MatchDoubleDAO.trouver(29, 30));
-		tableD1.getItems().setAll(MatchDoubleDAO.trouver(31, 31));
-		
+		tableD1.getItems().setAll(MatchDoubleDAO.trouver(31));
 	}
 
 	@FXML
 	private void onButtonHorairesActivated(){
+
+		updateMatchSelectionne();
 		
+		if(matchSelectionne != null){
+			try{
+				Parent root = (Parent)Utile.chargerFxml("modifierHorairesEmplacement");
+
+				Stage stage = new Stage();
+
+				stage.setTitle("Modifier l'horaire et l'emplacement du match");
+				stage.setScene(new Scene(root, 300, 180));
+				stage.initStyle(StageStyle.UTILITY);
+				stage.initModality(Modality.APPLICATION_MODAL);
+				stage.setResizable(false);
+				stage.show();
+			} catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 	}
 
 	@FXML
 	private void onButtonStaffActivated(){
-		
+
+		if(matchSelectionne != null){
+			
+		}
 	}
 
 	@FXML
 	private void onButtonScoresActivated(){
-		
+
+		if(matchSelectionne != null){
+			
+		}
+	}
+
+	private void updateMatchSelectionne(){
+
+		TabPane phase = (TabPane)root.getSelectionModel().getSelectedItem().getContent();
+		SplitPane split = (SplitPane)phase.getSelectionModel().getSelectedItem().getContent();
+		TableView table = (TableView)split.getItems().get(0);
+		matchSelectionne = (Match)table.getSelectionModel().getSelectedItem();
+	}
+
+	public static Match getMatchSelectionne(){
+
+		return(matchSelectionne);
 	}
 
 	private TableColumn<MatchSimple, String> colonneIdSimpleFactory(){
@@ -231,9 +286,9 @@ public class PagePlanning implements Initializable {
 		final TableColumn<MatchDouble, String> colonneTerrain = new TableColumn<>("Terrain");
 		colonneTerrain.setCellValueFactory(param -> {
 			final Match match = param.getValue();
-			String moment = "";
-			if(match.getMoment() != null) moment = match.getMoment().toString();
-			return(new SimpleStringProperty(moment));
+			String terrain = "";
+			if(match.getTerrain() != null) terrain = match.getTerrain().getNom();
+			return(new SimpleStringProperty(terrain));
 		});
 
 		return(colonneTerrain);

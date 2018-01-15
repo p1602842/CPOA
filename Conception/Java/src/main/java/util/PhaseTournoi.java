@@ -6,6 +6,8 @@ import java.util.List;
 public class PhaseTournoi {
 
 	public static final List<String> PHASES_POSSIBLES = Arrays.asList("Seizièmes - Qualifications", "Huitièmes - Qualifications", "Quarts - Qualifications", "Seizièmes", "Huitièmes", "Quarts", "Demis", "Big Match");
+	public static final List<String> PHASES_QUALIFS = Arrays.asList("Seizièmes - Qualifications", "Huitièmes - Qualifications", "Quarts - Qualifications");
+	public static final List<String> PHASES_FINAL = Arrays.asList("Seizièmes", "Huitièmes", "Quarts", "Demis", "Big Match");
 
 	private String phase = null;
 	private boolean matchDouble;
