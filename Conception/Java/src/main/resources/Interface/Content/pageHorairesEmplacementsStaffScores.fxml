@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+  
+<?import java.lang.*?> 
+<?import java.util.*?> 
+<?import javafx.scene.*?> 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.Node?>
+<?import javafx.scene.Parent?>
+<?import javafx.scene.layout.VBox?>
+  
+<BorderPane id="page-reservation" fx:controller="controller.PagePlanning" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+	<top>
+		<VBox>
+			<Text text="Planning - Horaires, emplacements, staff, scores" />
+			<Text text="Liste des matchs" />
+		</VBox>
+	</top>
+	<center>
+		<TabPane fx:id="root" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Qualifications">
+					<content>
+						<TabPane tabClosingPolicy="UNAVAILABLE">
+							<tabs>
+								<Tab text="16èmes">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableQ16">
+												</TableView>
+												<VBox fx:id="boxQ16">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="8èmes">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableQ8">
+												</TableView>
+												<VBox fx:id="boxQ8">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="Quarts">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableQ4">
+												</TableView>
+												<VBox fx:id="boxQ4">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+							</tabs>
+						</TabPane>
+					</content>
+				</Tab>
+				<Tab text="Simple">
+					<content>
+						<TabPane tabClosingPolicy="UNAVAILABLE">
+							<tabs>
+								<Tab text="16èmes">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableS16">
+												</TableView>
+												<VBox fx:id="boxS16">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="8èmes">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableS8">
+												</TableView>
+												<VBox fx:id="boxS8">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="Quarts">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableS4">
+												</TableView>
+												<VBox fx:id="boxS4">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="Demis">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableS2">
+												</TableView>
+												<VBox fx:id="boxS2">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="Big Match">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableS1">
+												</TableView>
+												<VBox fx:id="boxS1">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+							</tabs>
+						</TabPane>
+					</content>
+				</Tab>
+				<Tab text="Double">
+					<content>
+						<TabPane tabClosingPolicy="UNAVAILABLE">
+							<tabs>
+								<Tab text="16èmes">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableD16">
+												</TableView>
+												<VBox fx:id="boxD16">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="8èmes">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableD8">
+												</TableView>
+												<VBox fx:id="boxD8">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="Quarts">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableD4">
+												</TableView>
+												<VBox fx:id="boxD4">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="Demis">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableD2">
+												</TableView>
+												<VBox fx:id="boxD2">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+								<Tab text="Big Match">
+									<content>
+										<SplitPane dividerPositions="0.5">
+											<items>
+												<TableView fx:id="tableD1">
+												</TableView>
+												<VBox fx:id="boxD1">
+												</VBox>
+											</items>
+										</SplitPane>
+									</content>
+								</Tab>
+							</tabs>
+						</TabPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</center>
+	<right>
+		<VBox spacing="10.0">
+			<Button fx:id="boutonHoraires" text="Horaires et emplacements" onAction="#onButtonHorairesActivated" />
+			<Button fx:id="boutonStaff" text="Staff" onAction="#onButtonStaffActivated" />
+			<Button text="Scores" onAction="#onButtonScoresActivated" />
+		</VBox>
+	</right>
+</BorderPane>

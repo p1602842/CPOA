@@ -2,16 +2,38 @@ package entity;
 
 public class Arbitre {
 
-	public String nom;
-	public String prenom;
-	public String nationalite;
-	public String categorie;
+	private int id;
+	private String nom;
+	private String prenom;
+	private String nationalite;
+	private String categorie;
 
-	public Arbitre(String nom, String prenom, String nationalite, String categorie){
+	public Arbitre(int id, String nom, String prenom, String nationalite, String categorie){
 
+		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.nationalite = nationalite;
 		this.categorie = categorie;
+	}
+
+	public int getId(){
+
+		return(id);
+	}
+
+	public String getPrenom(){
+
+		return(prenom);
+	}
+
+	public String getNom(){
+
+		return(nom);
+	}
+
+	public String getPrenomNom(){
+
+		return(getPrenom() + " " + getNom());
 	}
 }

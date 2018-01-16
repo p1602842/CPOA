@@ -5,6 +5,6 @@
 <?import javafx.scene.*?> 
 <?import javafx.scene.layout.*?> 
   
-<HBox fx:id="root" id="banniere" fx:controller="controller.Banniere" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<HBox fx:id="root" id="banniere" fx:controller="controller.Banniere" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
 	
 </HBox>
