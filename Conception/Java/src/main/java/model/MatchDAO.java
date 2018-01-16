@@ -168,8 +168,10 @@ public abstract class MatchDAO extends DAO {
 
 		List<Moment> momentsImpossibles = new ArrayList<Moment>();
 
-		for(Match matchArbitreChaise : MatchDAO.matchsArbitre(match.getArbitreChaise())){
-			momentsImpossibles.add(matchArbitreChaise.getMoment());
+		if(match.getArbitreChaise() != null){
+			for(Match matchArbitreChaise : MatchDAO.matchsArbitre(match.getArbitreChaise())){
+				momentsImpossibles.add(matchArbitreChaise.getMoment());
+			}
 		}
 
 		for(Arbitre arbitre : match.getArbitresLigne()){
@@ -262,6 +264,39 @@ public abstract class MatchDAO extends DAO {
 			e.printStackTrace();
 		}
 
+		return(false);
+	}
+
+	public static boolean retirerHoraireEmplacementMatch(Match match){
+
+		String table;
+		String champ;
+	
+		if(match instanceof MatchSimple){
+			table = "MATCHSIMPLE";
+			champ = "SIMPLE";
+		}
+		else {
+			table = "MATCHDOUBLE";
+			champ = "DOUBLE";
+		}
+	
+		String sql = "UPDATE " + table + " SET HORAIRE_" + champ + " = ?, ID_TERRAIN = ? WHERE ID_MATCH_" + champ + " = ?";
+	
+		try {
+			PreparedStatement prep = prepareStatement(sql);
+	
+			prep.setNull(1, java.sql.Types.VARCHAR);
+			prep.setNull(2, java.sql.Types.INTEGER);;
+			prep.setInt(3, match.getId());
+	
+			int nb = prep.executeUpdate();
+	
+			return(nb >= 1);
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+	
 		return(false);
 	}
 }

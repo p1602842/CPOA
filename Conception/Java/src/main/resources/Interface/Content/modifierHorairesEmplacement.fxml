@@ -21,7 +21,6 @@
 	<ComboBox fx:id="horaireBox" id="horaire-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 	<Label text="Terrain" labelFor="$terrainBox" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 	<ComboBox fx:id="terrainBox" id="terrain-box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-	<HBox alignment="bottom_right" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
-		<Button text="Terminer modification" defaultButton="true" onAction="#onButtonActivated" />
-	</HBox>
+	<Button text="Reset" onAction="#onButtonResetActivated" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+	<Button text="Valider modification" defaultButton="true" onAction="#onButtonValiderActivated" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 </GridPane>

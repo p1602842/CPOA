@@ -40,12 +40,22 @@ public class Horaire {
 
 	public boolean estAvant(Horaire h){
 
-		return((HORAIRES_POSSIBLES.indexOf(h.getValeur()) > HORAIRES_POSSIBLES.indexOf(getValeur())));
+		if(h != null){
+			return((HORAIRES_POSSIBLES.indexOf(h.getValeur()) > HORAIRES_POSSIBLES.indexOf(getValeur())));
+		}
+		else {
+			return(true);
+		}
 	}
 
 	public boolean estApres(Horaire h){
 
-		return((HORAIRES_POSSIBLES.indexOf(h.getValeur()) < HORAIRES_POSSIBLES.indexOf(getValeur())));
+		if(h != null){
+			return((HORAIRES_POSSIBLES.indexOf(h.getValeur()) < HORAIRES_POSSIBLES.indexOf(getValeur())));
+		}
+		else {
+			return(true);
+		}
 	}
 
 	@Override

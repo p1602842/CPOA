@@ -19,6 +19,7 @@ import model.TerrainDAO;
 import util.Horaire;
 import util.Moment;
 import util.PhaseTournoi;
+import view.App;
 
 public class ModificationHoraireEmplacement implements Initializable {
 
@@ -116,7 +117,7 @@ public class ModificationHoraireEmplacement implements Initializable {
 						if(!terrainsImpossible.contains(terrain)){
 							terrains.add(terrain);
 						}
-						if((moment.equals(match.getMoment())) && (terrain.equals(match.getTerrain()))){
+						if((moment.equals(matchActuel.getMoment())) && (terrain.equals(matchActuel.getTerrain()))){
 							terrains.add(terrain);
 						}
 					}
@@ -128,11 +129,19 @@ public class ModificationHoraireEmplacement implements Initializable {
 	}
 
 	@FXML
-	public void onButtonActivated(){
+	public void onButtonValiderActivated(){
 
 		if(!jourBox.getSelectionModel().isEmpty() && !horaireBox.getSelectionModel().isEmpty() && !terrainBox.getSelectionModel().isEmpty()){
 			MatchDAO.modifierHoraireEmplacementMatch(matchActuel, new Moment(jourBox.getSelectionModel().getSelectedItem(), horaireBox.getSelectionModel().getSelectedItem()), terrainBox.getSelectionModel().getSelectedItem());
+			App.rechargerConteneur();
 		}
+	}
+
+	@FXML
+	public void onButtonResetActivated(){
+
+		MatchDAO.retirerHoraireEmplacementMatch(matchActuel);
+		App.rechargerConteneur();
 	}
 
 	public static List<Moment> momentsPossibles(Match match){

@@ -111,7 +111,7 @@ public class App extends Application {
 
 	public static void rechargerConteneur(){
 
-		conteneur.getChildren().setAll();
+		conteneur.getChildren().clear();
 
 		try {
 			Parent ecranParent = (Parent)Utile.chargerFxml(ecran);

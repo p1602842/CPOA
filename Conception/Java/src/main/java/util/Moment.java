@@ -73,6 +73,9 @@ public class Moment {
 
 	public boolean estAvant(Moment m){
 
+		if((m == null) || (m.getJour() == null) || (m.getHoraire() == null) || (getJour() == null) || (getHoraire() == null)){
+			return(true);
+		}
 		if(JOURS_POSSIBLES.indexOf(m.getJour()) == JOURS_POSSIBLES.indexOf(getJour())){
 			return(getHoraire().estAvant(m.getHoraire()));
 		}
@@ -82,6 +85,10 @@ public class Moment {
 	}
 
 	public boolean estApres(Moment m){
+
+		if((m == null) || (m.getJour() == null) || (m.getHoraire() == null) || (getJour() == null) || (getHoraire() == null)){
+			return(true);
+		}
 
 		if(JOURS_POSSIBLES.indexOf(m.getJour()) == JOURS_POSSIBLES.indexOf(getJour())){
 			return(getHoraire().estApres(m.getHoraire()));
@@ -107,6 +114,8 @@ public class Moment {
 	    if (!(o instanceof Moment))
 	    	return(false);
 	    Moment oMoment = (Moment)o;
+	    if((oMoment.getJour() == null) || (oMoment.getHoraire() == null))
+	    	return(false);
 	    if(oMoment.getJour().equals(this.getJour()) && oMoment.getHoraire().equals(this.getHoraire()))
 	    	return(true);
 	    else
