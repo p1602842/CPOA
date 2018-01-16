@@ -15,45 +15,6 @@ import util.Moment;
 
 public abstract class MatchDAO extends DAO {
 
-	public static List<Integer> ramasseursMatch(boolean enDouble, int idMatch){
-
-		List<Integer> ramasseurs = new ArrayList<Integer>();
-
-		String sql = "";
-
-		if(!enDouble){
-			sql = "SELECT ID_EQUIPE_RAMASSEURS FROM RAMASSE_SIMPLE WHERE ID_MATCH_SIMPLE = ?";
-		}
-		else {
-			sql = "SELECT ID_EQUIPE_RAMASSEURS FROM RAMASSE_DOUBLE WHERE ID_MATCH_DOUBLE = ?";
-		}
-
-		try{
-			PreparedStatement prep = prepareStatement(sql);
-
-			prep.setInt(1, idMatch);
-
-			ResultSet resultat = prep.executeQuery();
-
-			while(resultat.next()){
-				ramasseurs.add(resultat.getInt("ID_EQUIPE_RAMASSEURS"));
-			}
-		} catch(Exception e){
-			e.printStackTrace();
-		}
-
-		return(ramasseurs);
-	}
-
-	public static List<Integer> ramasseursMatch(Match match){
-
-		if(match instanceof MatchDouble){
-			return(ramasseursMatch(true, match.getId()));
-		}
-		else {
-			return(ramasseursMatch(false, match.getId()));
-		}
-	}
 
 	public static List<Match> matchsArbitre(int idArbitre){
 
@@ -180,7 +141,7 @@ public abstract class MatchDAO extends DAO {
 			}
 		}
 
-		for(Integer equipeRamasseurs : ramasseursMatch(match)){
+		for(Integer equipeRamasseurs : RamasseursDAO.ramasseursMatch(match)){
 			for(Match matchEquipeRamasseurs : MatchDAO.matchsEquipeRamassage(equipeRamasseurs.intValue())){
 				momentsImpossibles.add(matchEquipeRamasseurs.getMoment());
 			}

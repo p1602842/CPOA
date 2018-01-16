@@ -15,5 +15,10 @@ public class BoutonRetour {
 
 			App.setEcran("modifierPlanning");
 		}
+
+		if(App.getEcran().equals("modifierStaff")){
+
+			App.setEcran("horairesEmplacementsStaffScores");
+		}
 	}
 }

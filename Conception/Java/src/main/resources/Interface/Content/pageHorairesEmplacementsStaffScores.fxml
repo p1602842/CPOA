@@ -27,7 +27,7 @@
 							<tabs>
 								<Tab text="16èmes">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableQ16">
 												</TableView>
@@ -39,7 +39,7 @@
 								</Tab>
 								<Tab text="8èmes">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableQ8">
 												</TableView>
@@ -51,7 +51,7 @@
 								</Tab>
 								<Tab text="Quarts">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableQ4">
 												</TableView>
@@ -71,7 +71,7 @@
 							<tabs>
 								<Tab text="16èmes">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableS16">
 												</TableView>
@@ -83,7 +83,7 @@
 								</Tab>
 								<Tab text="8èmes">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableS8">
 												</TableView>
@@ -95,7 +95,7 @@
 								</Tab>
 								<Tab text="Quarts">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableS4">
 												</TableView>
@@ -107,7 +107,7 @@
 								</Tab>
 								<Tab text="Demis">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableS2">
 												</TableView>
@@ -119,7 +119,7 @@
 								</Tab>
 								<Tab text="Big Match">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableS1">
 												</TableView>
@@ -139,7 +139,7 @@
 							<tabs>
 								<Tab text="16èmes">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableD16">
 												</TableView>
@@ -151,7 +151,7 @@
 								</Tab>
 								<Tab text="8èmes">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableD8">
 												</TableView>
@@ -163,7 +163,7 @@
 								</Tab>
 								<Tab text="Quarts">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableD4">
 												</TableView>
@@ -175,7 +175,7 @@
 								</Tab>
 								<Tab text="Demis">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableD2">
 												</TableView>
@@ -187,7 +187,7 @@
 								</Tab>
 								<Tab text="Big Match">
 									<content>
-										<SplitPane dividerPositions="0.5">
+										<SplitPane dividerPositions="0.65">
 											<items>
 												<TableView fx:id="tableD1">
 												</TableView>
