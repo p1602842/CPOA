@@ -9,7 +9,6 @@ public class TennisMan {
 	private int rang;
 	@SuppressWarnings("unused")
 	private int age;
-	@SuppressWarnings("unused")
 	private String nationalite;
 
 	public TennisMan(int id, String nom, String prenom, int rang, int age, String nationalite){
@@ -35,6 +34,11 @@ public class TennisMan {
 	public String getNom(){
 
 		return(nom);
+	}
+
+	public String getNationalite(){
+
+		return(nationalite);
 	}
 
 	public String getPrenomNom(){

@@ -55,7 +55,12 @@ public class Moment {
 
 	public String getEnregistrement(){
 
-		return(jour + "_" + horaire.getValeur());
+		if((jour != null) && (horaire != null)){
+			return(jour + "_" + horaire.getValeur());
+		}
+		else {
+			return(null);
+		}
 	}
 
 	public static List<Moment> tousLesMoments(){

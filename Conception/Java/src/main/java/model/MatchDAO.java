@@ -16,6 +16,16 @@ import util.Moment;
 public abstract class MatchDAO extends DAO {
 
 
+	public static Match recharger(Match match){
+	
+		if(match instanceof MatchSimple){
+			return(MatchSimpleDAO.trouver(match.getId()));
+		}
+		else {
+			return(MatchDoubleDAO.trouver(match.getId()));
+		}
+	}
+
 	public static List<Match> matchsArbitre(int idArbitre){
 
 		List<Match> matchs = new ArrayList<Match>();

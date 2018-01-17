@@ -11,6 +11,16 @@ public class Equipe {
 		this.tennisMan2 = tennisMan2;
 	}
 
+	public TennisMan getTennisMan(int num){
+
+		if(num == 1){
+			return(tennisMan1);
+		}
+		else {
+			return(tennisMan2);
+		}
+	}
+
 	public String getNomsMembres(){
 
 		return(tennisMan1.getPrenomNom() + " & " + tennisMan2.getPrenomNom());
