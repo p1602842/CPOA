@@ -108,4 +108,9 @@ public class MatchDouble extends Match {
 
 		return(null);
 	}
+
+	public String getOpposants(){
+
+		return(equipe1 + " VS " + equipe2);
+	}
 }

@@ -38,6 +38,7 @@ import util.Horaire;
 import util.Moment;
 import util.PhaseTournoi;
 import util.Utile;
+import view.App;
 
 public class PagePlanning implements Initializable {
 
@@ -207,8 +208,10 @@ public class PagePlanning implements Initializable {
 	@FXML
 	private void onButtonStaffActivated(){
 
+		updateMatchSelectionne();
+
 		if(matchSelectionne != null){
-			
+			App.setEcran("modifierStaff");
 		}
 	}
 

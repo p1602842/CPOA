@@ -164,4 +164,9 @@ public class MatchSimple extends Match {
 
 		return(null);
 	}
+
+	public String getOpposants(){
+
+		return(tennisMan1 + " VS " + tennisMan2);
+	}
 }

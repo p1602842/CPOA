@@ -95,6 +95,8 @@ public abstract class Match {
 		}
 	}
 
+	public abstract String getOpposants();
+
 	@Override
 	public String toString(){
 
