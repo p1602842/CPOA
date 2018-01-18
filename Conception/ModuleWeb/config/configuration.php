@@ -36,5 +36,6 @@ define("PATH_GALERIE",'galerie/');
 //fichiers
 //define('LOG_BDD','logbdd.txt');
 define('PATH_LOGO', PATH_IMAGES.'logo.png');
+define('PATH_EMPLACEMENT',PATH_IMAGES.'emplacement.png');
 define('PATH_TENNIS',PATH_IMAGES.'tennis.jpg');
 define('PATH_MENU', PATH_VIEWS.'menu.php');

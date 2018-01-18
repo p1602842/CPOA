@@ -1,8 +1,6 @@
-<?php
-
-?>
 <!-- Menu du site -->
 <nav class="navbar navbar-default">
+  
   <div class="container-fluid">
     <ul class="nav navbar-nav">
 				<li <?php echo ($page=='accueil' ? 'class="active"':'')?>>
@@ -15,7 +13,7 @@
                         <?= MENU_BILLET ?>
                     </a>
 				</li>
-                <li <?php echo ($page=='billet' ? 'class="active"':'')?>>
+                <li <?php echo ($page=='planning' ? 'class="active"':'')?>>
 					<a href="index.php?page=planning">
 						<?= MENU_PLANNING ?>
                     </a>

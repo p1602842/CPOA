@@ -57,50 +57,32 @@ define('ERREUR_PHOTO_MODIF','Modification impossible !');
 define('ERREUR_PHOTO_VANDALE','Cette photo ne vous appartient pas, vandale !');
 
 define('MESSAGE_ERREUR','Une erreur s\'est produite');
-
+define('MODIF_PLANNING','Modifier le planning :');
+define('CHOIX_EMPLACEMENT','Choisissez votre emplacement');
 
 //Messages informations
-
-define('TEXTE_SELECTED_PHOTOS'," photo(s) selectionnée(s)");
-define('TEXTE_FORM_CAT_SUCCESS',"Categorie ajoutée !");
-define('TEXTE_FORM_PHOTO_SUCCESS',"Photo ajoutée !");
-
 define('TEXTE_FORM_CONNEXION_SUCCESS1',"Bienvenue ");
 define('TEXTE_FORM_CONNEXION_SUCCESS2',", redirection vers l'accueil en cours");
 
-define('TEXTE_FORM_INSCRIPTION_SUCCESS1',"Inscription réussite ");
-define('TEXTE_FORM_INSCRIPTION_SUCCESS2',", redirection vers l'accueil en cours");
-
-define('TEXTE_PHOTO_DELETE_SUCCESS',"Photo supprimé");
-define('TEXTE_PHOTO_MODIF_SUCCESS',"Modification réussite");
+define('TEXTE_ACCES_REFUSE','Cette page est accesible uniquement pour les administrateurs, merci de vous authentifier.');
 
 
 
 //Titres
-
-
-define('TITRE_PAGE_ACCUEIL_TOUS','Toutes les photos');
-define('TITRE_PAGE_ACCUEIL_CAT','Les photos de la categorie ');
-define('TITRE_PAGE_PHOTO','Les détails sur cette photo');
-
-define('TITRE_PAGE_ADDCAT','Quelle Categorie ?');
-define('TITRE_PAGE_ADDPHOTO','Quelle photo ?');
-
 define('TITRE_PAGE_CONNEXION','Connexion administrateur');
 define('TITRE_PAGE_INSCRIPTION','Inscription');
 
 
 //Forms
 
-define('FORM_QUESTION_CAT_AFFICHER','Quelles photos souhaitez-vous afficher ?');
-
-define('FORM_QUESTION_CAT_NAME','Nom de la catégorie:');
-
 define('FORM_QUESTION_PLANNING_FICHIER','Choisir le nouveau planning:');
-
 define('FORM_CONNEXION_IDENTIFIANT','Identifiant');
 define('FORM_CONNEXION_MDP','Mot de passe');
-
+define('CHOIX_ZONE','Vous avez choisi la zone suivante:');
+define('FORM_LICENCIE','Vous avez une licence ?');
+define('FORM_LICENCIE_NUMERO','Saisir votre numéro de licence :');
+define('FORM_CODE_PROMO_QUESTION','Vous avez un code promo?');
+define('FORM_CODE_PROMO_NUMERO','Saisir votre code promo');
 
 // Boutons
 define('BUTTON_CONNEXION','Se connecter');
