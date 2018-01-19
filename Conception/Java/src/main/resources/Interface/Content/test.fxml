@@ -1,68 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModificationStaff">
-   <top>
-      <VBox>
-         <children>
-            <Label fx:id="matchLabel" text="Match n° -  VS " />
-            <Label fx:id="horaireEmplacement" text="Terrain, Jour - Horaire" />
-         </children>
-      </VBox>
-   </top>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <TabPane tabClosingPolicy="UNAVAILABLE">
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Arbitres">
+          <Tab closable="false" text="Qualifications">
                <content>
-                  <BorderPane>
-                     <left>
-                        <TableView fx:id="arbitresInitialContainer" maxWidth="1.7976931348623157E308" />
-                     </left>
-                     <center>
-                        <VBox minWidth="150.0">
-                           <children>
-                              <Button fx:id="ajouterArbitreChaise" onAction="#ajouterArbitreChaise" text="Ajouter Arbitre Chaise &gt;" />
-                              <Button fx:id="ajouterArbitreLigne" onAction="#ajouterArbitreLigne" text="Ajouter Arbitre Ligne &gt;" />
-                              <Button fx:id="retirerArbitre" onAction="#retirerArbitre" text="&lt; Retirer" />
-                           </children>
-                        </VBox>
-                     </center>
-                     <right>
-                        <TreeTableView fx:id="arbitresFinalContainer" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER" />
-                     </right>
-                  </BorderPane>
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="N° Entrée" />
+                        <TableColumn prefWidth="75.0" text="Joueur">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Nom" />
+                              <TableColumn prefWidth="75.0" text="Âge" />
+                              <TableColumn prefWidth="75.0" text="Rang" />
+                              <TableColumn prefWidth="75.0" text="Nationalité" />
+                           </columns>
+                        </TableColumn>
+                     </columns>
+                  </TableView>
                </content>
           </Tab>
-          <Tab text="Ramasseurs">
+          <Tab closable="false" text="Simple">
                <content>
-                  <BorderPane>
-                     <left>
-                        <TableView fx:id="ramasseursInitialContainer" prefWidth="300.0" BorderPane.alignment="CENTER" />
-                     </left>
-                     <center>
-                        <VBox>
-                           <children>
-                              <Button fx:id="ajouterRamasseurs" onAction="#ajouterRamasseurs" text="Ajouter &gt;" />
-                              <Button fx:id="retirerRamasseurs" onAction="#retirerRamasseurs" text="&lt; Retirer" />
-                           </children>
-                        </VBox>
-                     </center>
-                     <right>
-                        <TableView fx:id="ramasseursFinalContainer" prefWidth="300.0" BorderPane.alignment="CENTER" />
-                     </right>
-                  </BorderPane>
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="N° Entrée" />
+                        <TableColumn prefWidth="75.0" text="Joueur">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Nom" />
+                              <TableColumn prefWidth="75.0" text="Âge" />
+                              <TableColumn prefWidth="75.0" text="Rang" />
+                              <TableColumn prefWidth="75.0" text="Nationalité" />
+                           </columns>
+                        </TableColumn>
+                     </columns>
+                  </TableView>
                </content>
           </Tab>
+            <Tab closable="false" text="Double">
+               <content>
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="N° Entrée" />
+                        <TableColumn prefWidth="75.0" text="Équipe">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Joueur 1">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="Nom" />
+                                    <TableColumn prefWidth="75.0" text="Nationalité" />
+                                 </columns>
+                              </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Joueur 2">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="Nom" />
+                                    <TableColumn prefWidth="75.0" text="Nationalité" />
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </center>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Editer" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>

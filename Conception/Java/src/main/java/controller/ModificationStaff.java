@@ -156,12 +156,16 @@ public class ModificationStaff implements Initializable {
 	@FXML
 	private void retirerArbitre(){
 
-		if(match.getArbitreChaise().equals(arbitresFinalContainer.getSelectionModel().getSelectedItem().getValue())){
-			ArbitreDAO.retirerArbitreChaise(match);
-		}
+		if(arbitresFinalContainer.getSelectionModel().getSelectedItem().getValue() != null){
+			if(match.getArbitreChaise() != null){
+				if(match.getArbitreChaise().equals(arbitresFinalContainer.getSelectionModel().getSelectedItem().getValue())){
+					ArbitreDAO.retirerArbitreChaise(match);
+				}
+			}
 
-		if(match.getArbitresLigne().contains(arbitresFinalContainer.getSelectionModel().getSelectedItem().getValue())){
-			ArbitreDAO.retirerArbitreLigne(match, arbitresFinalContainer.getSelectionModel().getSelectedItem().getValue());
+			if(match.getArbitresLigne().contains(arbitresFinalContainer.getSelectionModel().getSelectedItem().getValue())){
+				ArbitreDAO.retirerArbitreLigne(match, arbitresFinalContainer.getSelectionModel().getSelectedItem().getValue());
+			}
 		}
 
 		rechargerArbitres();
@@ -232,7 +236,12 @@ public class ModificationStaff implements Initializable {
 		final TableColumn<Arbitre, String> colonnePeutArbitrerChaise = new TableColumn<>("Peut arbitrer chaise ?");
 		colonnePeutArbitrerChaise.setCellValueFactory(param -> {
 			final Arbitre arbitre = param.getValue();
-			return(new SimpleStringProperty(new Boolean(arbitre.peutArbitrerChaise(match)).toString()));
+			if(arbitre.peutArbitrerChaise(match)){
+				return(new SimpleStringProperty("Oui"));
+			}
+			else {
+				return(new SimpleStringProperty("Non"));
+			}
 		});
 
 		return(colonnePeutArbitrerChaise);

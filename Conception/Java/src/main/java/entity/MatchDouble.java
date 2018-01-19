@@ -73,36 +73,36 @@ public class MatchDouble extends Match {
 	public static Match getMatchSuivant(int id) {
 
 		switch(id){
-		case 1 : return(MatchSimpleDAO.trouver(17));
-		case 2 : return(MatchSimpleDAO.trouver(17));
-		case 3 : return(MatchSimpleDAO.trouver(18));
-		case 4 : return(MatchSimpleDAO.trouver(18));
-		case 5 : return(MatchSimpleDAO.trouver(19));
-		case 6 : return(MatchSimpleDAO.trouver(19));
-		case 7 : return(MatchSimpleDAO.trouver(20));
-		case 8 : return(MatchSimpleDAO.trouver(20));
-		case 9 : return(MatchSimpleDAO.trouver(21));
-		case 10 : return(MatchSimpleDAO.trouver(21));
-		case 11 : return(MatchSimpleDAO.trouver(22));
-		case 12 : return(MatchSimpleDAO.trouver(22));
-		case 13 : return(MatchSimpleDAO.trouver(23));
-		case 14 : return(MatchSimpleDAO.trouver(23));
-		case 15 : return(MatchSimpleDAO.trouver(24));
-		case 16 : return(MatchSimpleDAO.trouver(24));
-		case 17 : return(MatchSimpleDAO.trouver(25));
-		case 18 : return(MatchSimpleDAO.trouver(25));
-		case 19 : return(MatchSimpleDAO.trouver(26));
-		case 20 : return(MatchSimpleDAO.trouver(26));
-		case 21 : return(MatchSimpleDAO.trouver(27));
-		case 22 : return(MatchSimpleDAO.trouver(27));
-		case 23 : return(MatchSimpleDAO.trouver(28));
-		case 24 : return(MatchSimpleDAO.trouver(28));
-		case 25 : return(MatchSimpleDAO.trouver(29));
-		case 26 : return(MatchSimpleDAO.trouver(29));
-		case 27 : return(MatchSimpleDAO.trouver(30));
-		case 28 : return(MatchSimpleDAO.trouver(30));
-		case 29 : return(MatchSimpleDAO.trouver(31));
-		case 30 : return(MatchSimpleDAO.trouver(31));
+		case 1 : return(MatchDoubleDAO.trouver(17));
+		case 2 : return(MatchDoubleDAO.trouver(17));
+		case 3 : return(MatchDoubleDAO.trouver(18));
+		case 4 : return(MatchDoubleDAO.trouver(18));
+		case 5 : return(MatchDoubleDAO.trouver(19));
+		case 6 : return(MatchDoubleDAO.trouver(19));
+		case 7 : return(MatchDoubleDAO.trouver(20));
+		case 8 : return(MatchDoubleDAO.trouver(20));
+		case 9 : return(MatchDoubleDAO.trouver(21));
+		case 10 : return(MatchDoubleDAO.trouver(21));
+		case 11 : return(MatchDoubleDAO.trouver(22));
+		case 12 : return(MatchDoubleDAO.trouver(22));
+		case 13 : return(MatchDoubleDAO.trouver(23));
+		case 14 : return(MatchDoubleDAO.trouver(23));
+		case 15 : return(MatchDoubleDAO.trouver(24));
+		case 16 : return(MatchDoubleDAO.trouver(24));
+		case 17 : return(MatchDoubleDAO.trouver(25));
+		case 18 : return(MatchDoubleDAO.trouver(25));
+		case 19 : return(MatchDoubleDAO.trouver(26));
+		case 20 : return(MatchDoubleDAO.trouver(26));
+		case 21 : return(MatchDoubleDAO.trouver(27));
+		case 22 : return(MatchDoubleDAO.trouver(27));
+		case 23 : return(MatchDoubleDAO.trouver(28));
+		case 24 : return(MatchDoubleDAO.trouver(28));
+		case 25 : return(MatchDoubleDAO.trouver(29));
+		case 26 : return(MatchDoubleDAO.trouver(29));
+		case 27 : return(MatchDoubleDAO.trouver(30));
+		case 28 : return(MatchDoubleDAO.trouver(30));
+		case 29 : return(MatchDoubleDAO.trouver(31));
+		case 30 : return(MatchDoubleDAO.trouver(31));
 		case 31 : return(null);
 		}
 

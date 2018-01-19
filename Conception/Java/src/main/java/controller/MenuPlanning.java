@@ -10,6 +10,7 @@ public class MenuPlanning {
 	}
 
 	public void onButtonEntreesActivated(){
-		
+
+		App.setEcran("modifierEntrees");
 	}
 }

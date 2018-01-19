@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.SplitPane?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModificationStaff">
    <top>
@@ -23,11 +24,9 @@
         <tabs>
           <Tab text="Arbitres">
                <content>
-                  <BorderPane>
-                     <left>
-                        <TableView fx:id="arbitresInitialContainer" maxWidth="1.7976931348623157E308" />
-                     </left>
-                     <center>
+                  <SplitPane>
+                     <items>
+                        <TableView fx:id="arbitresInitialContainer" />
                         <VBox minWidth="150.0">
                            <children>
                               <Button fx:id="ajouterArbitreChaise" onAction="#ajouterArbitreChaise" text="Ajouter Arbitre Chaise &gt;" />
@@ -35,31 +34,25 @@
                               <Button fx:id="retirerArbitre" onAction="#retirerArbitre" text="&lt; Retirer" />
                            </children>
                         </VBox>
-                     </center>
-                     <right>
-                        <TreeTableView fx:id="arbitresFinalContainer" maxWidth="1.7976931348623157E308" />
-                     </right>
-                  </BorderPane>
+                        <TreeTableView fx:id="arbitresFinalContainer" />
+                     </items>
+                  </SplitPane>
                </content>
           </Tab>
           <Tab text="Ramasseurs">
                <content>
-                  <BorderPane>
-                     <left>
-                        <TableView fx:id="ramasseursInitialContainer" maxWidth="1.7976931348623157E308" />
-                     </left>
-                     <center>
-                        <VBox minWidth="150.0">
+                  <SplitPane>
+                     <items>
+                        <TableView fx:id="ramasseursInitialContainer" />
+                        <VBox minWidth="75.0">
                            <children>
                               <Button fx:id="ajouterRamasseurs" onAction="#ajouterRamasseurs" text="Ajouter &gt;" />
                               <Button fx:id="retirerRamasseurs" onAction="#retirerRamasseurs" text="&lt; Retirer" />
                            </children>
                         </VBox>
-                     </center>
-                     <right>
-                        <TableView fx:id="ramasseursFinalContainer" maxWidth="1.7976931348623157E308" />
-                     </right>
-                  </BorderPane>
+                        <TableView fx:id="ramasseursFinalContainer" />
+                     </items>
+                  </SplitPane>
                </content>
           </Tab>
         </tabs>

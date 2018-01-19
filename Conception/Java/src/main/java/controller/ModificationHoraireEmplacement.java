@@ -46,7 +46,7 @@ public class ModificationHoraireEmplacement implements Initializable {
 		List<Moment> momentsPossibles = momentsPossibles(match);
 
 		if(match instanceof MatchSimple){
-			if(PhaseTournoi.PHASES_QUALIFS.contains(match.getPhaseTournoi())){
+			if(PhaseTournoi.PHASES_QUALIFS.contains(match.getPhaseTournoi().getValeur())){
 				for(Moment moment : momentsPossibles){
 					if(Moment.JOURS_POSSIBLES_QUALIFS.contains(moment.getJour())){
 						if(!jourBox.getItems().contains(moment.getJour())){
@@ -163,7 +163,11 @@ public class ModificationHoraireEmplacement implements Initializable {
 		}
 
 		for(Moment moment : Moment.tousLesMoments()){
-			if(((precedentPlusTardif == null) || (moment.estApres(precedentPlusTardif.getMoment()))) && ((suivant == null) || (moment.estAvant(suivant.getMoment())))){
+			if(
+					((precedentPlusTardif == null) || (moment.estApres(precedentPlusTardif.getMoment())))
+					&&
+					((suivant == null) || (moment.estAvant(suivant.getMoment())))
+					){
 				if(!MatchDAO.momentsImpossibles(match).contains(moment)){
 					
 					momentsPossibles.add(moment);
