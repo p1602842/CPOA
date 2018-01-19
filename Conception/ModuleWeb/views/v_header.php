@@ -1,7 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
 	<head>
-		<title><?= TITRE ?></title>
+		<title>Grand Prix de Tennis de Lyon</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="Language" content="<?= LANG ?>"/>
 		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0"/>
@@ -14,23 +17,28 @@
 		<script type="text/javascript" src="<?= PATH_SCRIPTS ?>jquery.validate.min.js"></script>
 		<script type="text/javascript" src="<?= PATH_SCRIPTS ?>monjs.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+
 	</head>
-	<body>
-		<!-- En-tête -->
-		<header class="header" >
-			<section class="container" >
-				<div class = "row">
-					<div class = "col-md-2 col-sm-2 col-xs-12">
-						<img src="<?= PATH_LOGO ?>" alt="<?= LOGO ?>" class="img-circle">
-					</div>
-					<div class="col-md-10 col-sm-10 col-xs-12">
-						<h2><?= TITRE ?></h2>
+	<body class="homepage">
+		<header>
+		<div id="page-wrapper">
+
+
+				<div id="header-wrapper" class="wrapper">
+					<div id="header">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.php">Grand Prix de Tennis de Lyon</a></h1>
+								<p>DUT Informatique - Université Claude Bernard Lyon 1</p>
+							</div>
+
+							
+						
+
 					</div>
 				</div>
-			</section>
-		</header>
-		<!-- Menu -->
-		<?php include(PATH_VIEWS.'menu.php'); ?>
-		<!-- Vue -->
-			<section class="container">
-				<div class = "row">
+</header>
+<?php include(PATH_VIEWS.'menu.php'); ?>
+				

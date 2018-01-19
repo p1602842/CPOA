@@ -3,10 +3,10 @@
 const DEBUG = true; // production : false; dev : true
 
 // Accès base de données
-const BD_HOST = '90.119.181.117';
+const BD_HOST = 'localhost';
 const BD_DBNAME = 'cpoa-asc';
-const BD_USER = 'CPOA';
-const BD_PWD = 'carotte';
+const BD_USER = 'root';
+const BD_PWD = '';
 
 // Identifiants connexion espace administrateur
 const USERNAME = "CPOA";

@@ -3,9 +3,10 @@
 }
 
 .img-accueil{
-	background-size: 100% auto;
-	max-width: 85%;
-	border-radius: 10px;
+	background-size: 120% auto;
+	max-width: 100%;
+	border-radius: 5px;
+	align-content: center;
 }
 h3{
 	border-radius: 10px;	

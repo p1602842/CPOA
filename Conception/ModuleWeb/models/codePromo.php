@@ -2,10 +2,12 @@
 
 class codePromo{
     private $id_codePromo;
+    private $quantiteMax;
     private $reduction;
 
-    public function __construct($id_codePromo, $reduction){
+    public function __construct($id_codePromo, $quantiteMax, $reduction){
         $this->id_codePromo = $id_codePromo;
+        $this->quantiteMax = $quantiteMax;
         $this->reduction = $reduction;
     }
 
@@ -15,5 +17,8 @@ class codePromo{
 
     public function getReduction(){
         return $this->reduction;
+    }
+    public function getQuantiteMax(){
+        return $this->quantiteMax;
     }
 }

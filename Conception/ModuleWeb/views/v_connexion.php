@@ -6,16 +6,16 @@
 <!--  Début de la page -->
 <?php if(!isset($_SESSION["logged"])){ ?>
 
-<h1><?= TITRE_PAGE_CONNEXION ?></h1>
-<div class="col-xs-8 col-sm-6 col-md-4">
 
+<div id="intro-wrapper" class="wrapper style2">
+<h1><?= TITRE_PAGE_CONNEXION ?></h1>
     <form action="index.php?page=connexion" method="post" class="well">
-         <div class="form-group">
+         <div>
              <label><?= FORM_CONNEXION_IDENTIFIANT ?></label>
              <input type="text" name="username">
         </div>
 
-         <div class="form-group">
+         <div >
              <label><?= FORM_CONNEXION_MDP ?></label>
              <input type="password" name="pass">
         </div>

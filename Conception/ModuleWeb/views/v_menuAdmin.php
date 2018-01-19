@@ -6,11 +6,7 @@ if(!$_SESSION['logged']){
 <nav class="navbar navbar-default">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-                  <li <?php echo ($page=='statistiques' ? 'class="active"':'')?>>
-                      <a href="index.php?page=statistiques">
-                          <?= MENU_STATISTIQUES ?>
-                      </a>
-                  </li>
+
                   <li <?php echo ($page=='billetAdmin' ? 'class="active"':'')?>>
                       <a href="index.php?page=billetAdmin">
                           <?= MENU_BILLET ?>

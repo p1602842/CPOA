@@ -16,6 +16,10 @@ class emplacementDAO extends DAO{
         return false;
     }
     }
+    public function getCapaciteEmplacement($idEmplacement){
+        $req = $this->queryRow("select ID_EMPLACEMENT, CAPACITE_MAX FROM EMPLACEMENT WHERE ID_EMPLACEMENT=?",[$idEmplacement]);
+        return $req;
+    }
 
 
 }
