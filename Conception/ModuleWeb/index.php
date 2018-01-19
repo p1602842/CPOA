@@ -15,7 +15,6 @@ session_start();
 
 require_once('/languages/FR-fr.php');
 
-if(!isset($_SESSION['logged']))$_SESSION['logged'] = false;
 
 //vérification de la page demandée
 
@@ -29,6 +28,7 @@ if(isset($_GET['page']))
 }
 else
 	$page='accueil'; //page d'accueil du site
+
 
 
 //appel du controller

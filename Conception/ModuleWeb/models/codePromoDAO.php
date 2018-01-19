@@ -16,4 +16,11 @@ public function getAllCodePromo(){
         return false;
     }
 }
+
+    public function getCodePromo($code)
+    {
+        $req=$this->queryRow("SELECT * FROM CODEPROMO WHERE CODE =?",[$code]);
+        return $req;
+    }
+
 }

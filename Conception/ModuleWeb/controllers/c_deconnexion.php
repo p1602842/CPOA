@@ -1,7 +1,6 @@
 <?php
 
-$_SESSION['logged']=false;
-$_SESSION['user']=null;
+session_unset();
 
 header("Location: index.php");
 exit();

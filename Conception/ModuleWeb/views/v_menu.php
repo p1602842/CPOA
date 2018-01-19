@@ -19,7 +19,7 @@
                     </a>
 				</li>
 
-				<?php if($_SESSION['logged']){?>
+				<?php if(isset($_SESSION['logged'])){?>
 				<li <?php echo ($page=='administrateur' ? 'class="active"':'')?> >
 					<a href="index.php?page=administrateur">
 						<?= MENU_ADMIN ?>
@@ -28,7 +28,7 @@
 				<?php } ?>
     </ul>
 	<ul class="nav navbar-nav navbar-right">
-        <?php if(!$_SESSION['logged']){ ?>
+        <?php if(empty($_SESSION['logged'])){ ?>
         <li <?php echo ($page=='connexion' ? 'class="active"':'')?> >
             <a href="index.php?page=connexion"><?= MENU_CONNEXION ?></a>
         </li>

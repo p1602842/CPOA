@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+  
+<?import java.lang.*?> 
+<?import java.util.*?> 
+<?import javafx.scene.*?> 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+  
+<BorderPane fx:id="pageReservation" id="page-reservation" fx:controller="controller.PageReservation" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+	<top>
+		<VBox>
+			<Text text="Entraînement - Réservation de terrains" />
+			<Text text="Liste des réservations" />
+		</VBox>
+	</top>
+	<center>
+		<TableView fx:id="table" />
+	</center>
+	<right>
+		<Button text="Réserver un terrain" onAction="#onButtonActivated" />
+	</right>
+</BorderPane>

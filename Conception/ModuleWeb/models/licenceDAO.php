@@ -16,4 +16,9 @@ public function getAllLicence(){
         return false;
     }
 }
+public function getLicence($licence){
+    $req = $this->queryRow("SELECT * FROM LICENCIE WHERE NUMLICENCIE = ?",[$licence]);
+    return $req;
+}
+
 }

@@ -4,24 +4,26 @@
 	<body>
         <div>
             <?php echo(CHOIX_ZONE), $_POST['choix'];?>
+            
 	    </div>
-            <?php echo(FORM_LICENCIE) ?>
+        <div>
+            <br/><?php echo(FORM_LICENCIE) ?>
             <FORM Method="POST" Action="index.php?page=licencie">
-                <?php echo(FORM_LICENCIE_NUMERO) ?>
-                <INPUT type=text size=20 name=numLicence>
-                
-                <?php echo(FORM_CODE_PROMO_QUESTION) ?>
-                <?php echo(FORM_CODE_PROMO_NUMERO) ?>
-                <INPUT type=text size=20 name=codePromo>
-                
-                <INPUT type=submit value=Envoyer>
+                <?php echo(FORM_LICENCIE_NUMERO) ?> <br/>
+                <INPUT type=text size=20 name=numLicence placeholder="facultatif">
+        </div>
+        <div>   
+                <br/><?php echo(FORM_CODE_PROMO_QUESTION) ?> <br/>
+                <?php echo(FORM_CODE_PROMO_NUMERO) ?> <br/>
+                <INPUT type=text size=20 name=codePromo placeholder="facultatif">
+                <INPUT type=hidden name=choix value=<?= $_POST['choix']?>>
+        </div>
+                <br/><INPUT type=submit value=Ajouter>
+                <INPUT type=submit value=Suivant>
             </FORM>
 
-            <?php if (!$bool){ 
-                echo "Numero de licence incorrect.";
-            }
-            if (!$bool2){
-                echo "Code promo invalide.";
+            <?php foreach ($errors as $e){
+                echo $e;
             }
             ?>
 	</body>

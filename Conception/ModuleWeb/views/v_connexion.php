@@ -4,7 +4,7 @@
 <?php require_once(PATH_VIEWS.'alert.php');?>
 
 <!--  Début de la page -->
-<?php if(!$_SESSION["logged"]){ ?>
+<?php if(!isset($_SESSION["logged"])){ ?>
 
 <h1><?= TITRE_PAGE_CONNEXION ?></h1>
 <div class="col-xs-8 col-sm-6 col-md-4">

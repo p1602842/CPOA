@@ -27,7 +27,7 @@ public function getTerrainDouble($ID_MATCH){
     FROM TERRAIN
     INNER JOIN MATCHDOUBLE
     WHERE TERRAIN.ID_TERRAIN = MATCHDOUBLE.ID_TERRAIN
-    AND ID_MATCH_DOUBLE = ?",$ID_MATCH);
+    AND ID_MATCH_DOUBLE = ?", $args);
     if($req){
         foreach ($req as $terrain){
             $list[] = new terrain($terrain[0]);

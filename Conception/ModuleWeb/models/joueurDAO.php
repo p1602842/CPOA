@@ -13,8 +13,8 @@ INNER JOIN JOUE_SIMPLE
 WHERE TENNISMAN.ID_TENNISMAN = JOUE_SIMPLE.ID_TENNISMAN
 AND ID_MATCH_SIMPLE = ?", $args);
     if($req){
-        foreach ($req as $joueur){
-            $list[] = new joueur($joueur[0], $joueur[1]);
+        foreach ($req as $tennisman){
+            $list[] = new Tennisman($tennisman[0], $tennisman[1]);
         }
         return $list;
     } else {

@@ -1,6 +1,7 @@
 <?php
 if(!$_SESSION['logged']){
     echo(TEXTE_ACCES_REFUSE);
+}else{
 ?>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -23,4 +24,4 @@ if(!$_SESSION['logged']){
       </ul>
     </div>
 </nav>
-<? } ?>
+<?php } ?>

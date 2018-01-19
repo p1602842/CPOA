@@ -1,6 +1,6 @@
 <?php
 
-if($_SESSION['logged'])header("Refresh:0; url=index.php");
+if(isset($_SESSION['logged'])) header("Refresh:0; url=index.php");
 
 
 if (isset($_POST['username'])){

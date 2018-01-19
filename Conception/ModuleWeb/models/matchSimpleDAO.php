@@ -29,4 +29,9 @@ public function getMatchSimpleVisiteur(){
         return false;
     }
 }
+public function getMatchById($idMatch){
+    $req=$this->queryRow("select * FROM MATCHSIMPLE WHERE ID_MATCH_SIMPLE = ?",[$idMatch]);
+    return $req;
+}
+
 }

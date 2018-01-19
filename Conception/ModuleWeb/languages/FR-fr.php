@@ -75,14 +75,14 @@ define('TITRE_PAGE_INSCRIPTION','Inscription');
 
 //Forms
 
-define('FORM_QUESTION_PLANNING_FICHIER','Choisir le nouveau planning:');
+define('FORM_QUESTION_PLANNING_FICHIER','Choisir le nouveau planning: ');
 define('FORM_CONNEXION_IDENTIFIANT','Identifiant');
 define('FORM_CONNEXION_MDP','Mot de passe');
-define('CHOIX_ZONE','Vous avez choisi la zone suivante:');
-define('FORM_LICENCIE','Vous avez une licence ?');
-define('FORM_LICENCIE_NUMERO','Saisir votre numéro de licence :');
-define('FORM_CODE_PROMO_QUESTION','Vous avez un code promo?');
-define('FORM_CODE_PROMO_NUMERO','Saisir votre code promo');
+define('CHOIX_ZONE','Vous avez choisi la zone suivante : ');
+define('FORM_LICENCIE','Vous avez une licence ? ');
+define('FORM_LICENCIE_NUMERO','Saisir votre numéro de licence : ');
+define('FORM_CODE_PROMO_QUESTION','Vous avez un code promo? ');
+define('FORM_CODE_PROMO_NUMERO','Saisir votre code promo' );
 
 // Boutons
 define('BUTTON_CONNEXION','Se connecter');

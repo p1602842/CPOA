@@ -19,7 +19,9 @@ foreach ($list as $match){
     if($match->getTERRAIN()){
         echo "Terrain: ".$match->getTERRAIN()->getNomTerrain().'<br/>';
     }
-    echo '<a href="index.php?page=choisirEmplacement">Choisir ce match</a>';
+
+
+    echo '<a href="index.php?page=choisirEmplacement&idMatch='.$match->getID_MATCH_SIMPLE().'&type=simple">Choisir ce match</a>';
     echo '<br/>' ;
     echo '<br/>' ;
 

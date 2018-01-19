@@ -1,39 +1,45 @@
 <?php
 require_once(PATH_MODELS."licenceDAO.php");
 require_once(PATH_MODELS."codePromoDAO.php");
-$bool = false;
-$bool2= false;
+$errors = array();
+$_SESSION['choix'] = $_POST['choix'];
+unset($_SESSION['licence']);
+unset($_SESSION['codePromo']);
 
-if (isset($_POST["numLicence"])){
+if (!empty($_POST["numLicence"])){
     $l = $_POST["numLicence"];
-       
     $lDAO = new licenceDAO(DEBUG);
-    $list = $lDAO->getAllLicence();
-    if ($list){
-        foreach($list as $item){
-            if ($item == $l){
-                $bool = true;
-            }
-        }
+    $exist = $lDAO->getLicence($l);
+    if (!$exist) {
+        $errors[] = "Licence invalide";
+        
+    } else {
+        $_SESSION['licence']=$exist;
     }
-   
 }
 
-if (isset($_POST["codePromo"])){
+
+if (!empty($_POST["codePromo"])){
     $c = $_POST["codePromo"];
     $cDAO = new codePromoDAO(DEBUG);
-    $list = $cDAO->getAllCodePromo();
-    if ($list){
-        foreach($list as $item){
-            if ($item == $c){
-                $bool2 = true;
-            }
-        }
+    $exist = $cDAO->getCodePromo($c); 
+    if (!$exist) {
+        $errors[] = "Code promo invalide";
     }
-    
-}
-else{
-    $bool2=true;
+    else{
+        $_SESSION['codePromo']=$exist;
+    }
+
 }
 
-require_once(PATH_VIEWS.$page.'.php');
+
+if (!count($errors) && array_key_exists('codePromo', $_POST)){
+    $page='recapBillet';
+    header('Location: index.php?page='.$page);
+}
+
+else{
+    require_once(PATH_VIEWS.$page.'.php');
+}
+
+

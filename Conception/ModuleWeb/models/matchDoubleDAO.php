@@ -26,8 +26,8 @@ public function getMatchDoubleVisiteur(){
             $terrain = $terrainDAO->getTerrainDouble($matchDouble[0]);
 
             $joueurEquipeDAO = new joueurEquipeDAO(DEBUG);
-            $joueurEquipe1 = $joueurEquipeDAO->getJoueurEquipe($equipe[0]);
-            $joueurEquipe2 = $joueurEquipeDAO->getJoueurEquipe($equipe[1]);
+            $joueurEquipe1 = $joueurEquipeDAO->getJoueurEquipe($equipe[0]->getIdEquipe());
+            $joueurEquipe2 = $joueurEquipeDAO->getJoueurEquipe($equipe[1]->getIdEquipe());
 
             $list[] = new matchDouble($matchDouble[0], $matchDouble[1], $matchDouble[2], $equipe, $joueurEquipe1, $joueurEquipe2, $terrain);
         }
@@ -35,5 +35,9 @@ public function getMatchDoubleVisiteur(){
     } else {
         return false;
     }
+}
+public function getMatchById($idMatch){
+    $req=$this->queryRow("select * FROM MATCHDOUBLE WHERE ID_MATCH_DOUBLE = ?",[$idMatch]);
+    return $req;
 }
 }
