@@ -11,9 +11,11 @@ require_once(PATH_MODELS.'bigMatchDAO.php');
 switch ($_SESSION['type']) {
     case 'simple':
         $resource = new matchSimpleDAO(DEBUG);
+        
         break;
     case 'double':
         $resource = new matchDoubleDAO(DEBUG);
+                
         break;
 }
 

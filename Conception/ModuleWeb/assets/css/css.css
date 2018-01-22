@@ -379,7 +379,7 @@ ul#demo-block li a{
 .divMatch table {
     width: 400px !important;
     margin: 0;
-    color: black;
+    color: black !important;
     margin: 20px;
     margin-top: 0px;
 }
