@@ -1,0 +1,19 @@
+<?php
+
+require_once('DAO.php');
+
+class AdminPrixDAO extends DAO {
+	
+	public function getPrixbyID($ID){
+		return $this -> queryRow('SELECT * FROM `prixgrandpublic` where `idMatch` = ?', array($ID));
+	}
+	
+	public function setPrixbyID($ID, $prix1, $prix2, $prix3, $prix0){
+		return $this -> querybdd('UPDATE `prixgrandpublic` SET `PrixNiveau1` = ?, `PrixNiveau2` = ?, `PrixNiveau3` = ?, `PrixNiveau0` = ? WHERE `prixgrandpublic`.`idMatch` = ?;', array($prix1, $prix2, $prix3, $prix0, $ID) );
+	}
+	
+	public function setPlacesbyID($ID, $licencie, $solidarite, $promo){
+		return $this -> querybdd('UPDATE `prixgrandpublic` SET `placeLicencie` = ?, `placePromo` = ?, `placeSolidarite` = ? WHERE `prixgrandpublic`.`idMatch` = ?;', array($licencie, $promo, $solidarite, $ID) );
+	}
+}
+?>
